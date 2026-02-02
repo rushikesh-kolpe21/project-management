@@ -24,6 +24,9 @@ app.use(clerkMiddleware())
 
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
+const workspaceRouter = require('./routes/workspaceRoutes.js')
+app.use('/api/workspaces', workspaceRouter);
+
 app.get('/', (req, res) => {
     res.send('Server is running');
 });
