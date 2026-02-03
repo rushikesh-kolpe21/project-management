@@ -103,7 +103,20 @@ const workspaceSlice = createSlice({
             );
         }
 
-    }
+    },
+    extraReducers: (builder) => { 
+        // builder.addCase(someAsyncThunk.pending, (state) => {
+        //     state.loading = true;
+        // });
+        // builder.addCase(someAsyncThunk.fulfilled, (state, action) => {
+        //     state.loading = false;
+        //     // handle success
+        // });
+        // builder.addCase(someAsyncThunk.rejected, (state) => {
+        //     state.loading = false;
+        //     // handle error
+        // });
+    },
 });
 
 export const { setWorkspaces, setCurrentWorkspace, addWorkspace, updateWorkspace, deleteWorkspace, addProject, addTask, updateTask, deleteTask } = workspaceSlice.actions;
